@@ -22,7 +22,8 @@ onMounted(() => {
       clearInterval(countdownFunction);
       timer.value = "EXPIRED";
     } else {
-      timer.value = `${months}M ${days}d ${hours}h ${minutes}m ${seconds}s`;
+      // timer.value = `${months}M ${days}d ${hours}h ${minutes}m ${seconds}s`;
+      timer.value = `${months}M ${days}d ${hours}h ${minutes}m`;
     }
   }, 1000);
 });
