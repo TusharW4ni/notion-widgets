@@ -32,12 +32,14 @@ onMounted(() => {
 <template>
   <div class="flex h-screen">
     <div
-      class="flex w-screen h-screen rounded-lg border-4 border-[#3c6650] bg-[#243d30]"
+      class="flex flex-col w-screen h-screen rounded-lg border-4 border-[#3c6650] bg-[#243d30]"
     >
-      <div class="flex flex-col justify-center items-center w-full">
-        <div class="uppercase text-xl font-mono font-bold text-gray-400">
-          Semester Ends
-        </div>
+      <div
+        class="flex p-2 justify-center text-xl font-mono font-bold text-white bg-[#1a2b22]"
+      >
+        Semester Ends
+      </div>
+      <div class="flex flex-col justify-center items-center w-full h-full">
         <div class="text-2xl font-mono font-bold text-white mt-4">
           {{ timer }}
         </div>
