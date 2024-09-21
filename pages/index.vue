@@ -1,25 +1,24 @@
 <script setup>
-async function navigateToEventCounter() {
-  await navigateTo("/event-countdown");
-}
-async function navigateToSemesterWeekNum() {
-  await navigateTo("/semester-week-num");
+async function nav(str) {
+  await navigateTo(`/${str}`);
 }
 </script>
 
 <template>
-  <div class="flex flex-col space-y-3 h-screen justify-center items-center">
+  <div
+    class="flex flex-col space-y-3 justify-center items-center h-w-screen h-screen bg-gray-900 text-white"
+  >
     <button
-      v-on:click="navigateToEventCounter()"
-      class="border p-2 rounded bg-gray-100 hover:bg-gray-300 hover:shadow-lg"
+      class="border-2 border-gray-500 px-4 py-2 rounded-full text-black bg-gray-200 hover:bg-gray-500 hover:text-white hover:border-white"
+      @click="nav(`event-countdown`)"
     >
       Event Countdown
     </button>
     <button
-      v-on:click="navigateToSemesterWeekNum()"
-      class="border p-2 rounded bg-gray-100 hover:bg-gray-300 hover:shadow-lg"
+      class="border-2 border-gray-500 px-4 py-2 rounded-full text-black bg-gray-200 hover:bg-gray-500 hover:text-white hover:border-white"
+      @click="nav(`semester-week-num`)"
     >
-      Semester Week #
+      Semester Week Number
     </button>
   </div>
 </template>
