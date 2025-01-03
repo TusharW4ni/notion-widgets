@@ -1,4 +1,5 @@
 <script setup>
+const hovered = ref(false);
 const timer = ref("Loading...");
 
 onMounted(() => {
@@ -30,9 +31,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex h-screen">
+  <div class="relative flex h-screen">
     <div
       class="flex flex-col w-screen h-screen rounded-lg border-4 border-[#3c6650] bg-[#243d30]"
+      @mouseenter="hovered = true"
+      @mouseleave="hovered = false"
     >
       <div
         class="flex p-2 justify-center text-xl font-mono font-bold text-white bg-[#1a2b22]"
@@ -44,6 +47,14 @@ onMounted(() => {
           {{ timer }}
         </div>
       </div>
+    </div>
+    <div
+      v-if="hovered"
+      class="absolute right-96 bottom-96 border p-40"
+      @mouseenter="hovered = true"
+      @mouseleave="hovered = false"
+    >
+      afasdfasdf
     </div>
   </div>
 </template>
